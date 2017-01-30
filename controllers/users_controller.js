@@ -23,8 +23,9 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }).then(function (data) {
-      console.log(data);
-      res.send(`${JSON.stringify({users:data})}\nhas been created`)
+      // req.json(data);
+      // res.send(`${JSON.stringify({users:data})}\nhas been created`)
+      res.send(`User:\nname:${req.body.name}\npassword:${hash.generate(req.body.password)}\nemail:${req.body.email}\nbirthday: ${req.body.birthday}\nhas been created`)
     })
   },
   deleteUser: (req, res) => {
@@ -46,7 +47,7 @@ module.exports = {
         updatedAt: new Date()
       })
     }).then(function (data) {
-      console.log(req.body.name);
+      // res.json(data);
       res.send(`Update user:\nname:${req.body.name}\npassword:${hash.generate(req.body.password)}\nemail:${req.body.email}\nbirthday: ${req.body.birthday}`)
     })
   }
