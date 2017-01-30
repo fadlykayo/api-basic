@@ -1,20 +1,13 @@
 {
   "development": {
-    "host": "127.0.0.1",
     "dialect": "sqlite",
     "storage": "db/users.db",
     "logging": false,
     "base_url": "http://localhost:3000/"
   },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
   "production": {
-    "use_env_variable": "DATABASE_URL",
+    "storage": "db/users.db",
+    "dialect": "sqlite",
     "base_url": "https://morning-cove-26393.herokuapp.com/"
   }
 }
