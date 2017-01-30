@@ -3,7 +3,8 @@
     "host": "127.0.0.1",
     "dialect": "sqlite",
     "storage": "db/users.db",
-    "logging": false
+    "logging": false,
+    "base_url": "http://localhost:3000/"
   },
   "test": {
     "username": "root",
@@ -13,10 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable": "DATABASE_URL",
+    "base_url": "https://morning-cove-26393.herokuapp.com/"
   }
 }
