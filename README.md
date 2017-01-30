@@ -1,5 +1,9 @@
 # api-basic
 
+# Information
+
+Demo app dengan REST API
+
 # Endpoints
 
 | Route           | HTTP          | Description                 |
@@ -13,15 +17,7 @@
 # Usage
 
 ```
-npm install -g sequelize-cli
-npm install --save-dev sequelize-cli
-npm install --save sequelize
-npm install -g express-generator
-npm install --save express
-express . --ejs
-npm install
-npm install -g nodemon
-npm install --save-dev nodemon
-npm install --save-dev password-hash
+npm install -g sequelize-cli express-generator sqlite3 nodemon
+npm start
 
 ```

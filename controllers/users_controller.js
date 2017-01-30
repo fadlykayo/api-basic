@@ -11,19 +11,20 @@ module.exports = {
   },
   getUser: (req, res) => {
     models.Users.findById(req.params.id).then(function (data) {
-      res.send({users:data})
+      res.send({user:data})
     })
   },
   createUser: (req, res) => {
     models.Users.create({
-      name: req.body.username,
+      name: req.body.name,
       password: hash.generate(req.body.password),
       email: req.body.email,
       birthday: req.body.birthday,
       createdAt: new Date(),
       updatedAt: new Date()
     }).then(function (data) {
-      res.send({users:data})
+      console.log(data);
+      res.send(`${JSON.stringify({users:data})}\nhas been created`)
     })
   },
   deleteUser: (req, res) => {
@@ -32,20 +33,21 @@ module.exports = {
         id: req.params.id
       }
     }).then(function (data) {
-      res.send({users:data})
+      res.send(`Delete user with ID: ${req.params.id}`)
     })
   },
   updateUser: (req, res) => {
     models.Users.findById(req.params.id).then(function (findUser) {
       findUser.update({
-        name: req.body.username,
+        name: req.body.name,
         password: hash.generate(req.body.password),
         email: req.body.email,
         birthday: req.body.birthday,
         updatedAt: new Date()
       })
     }).then(function (data) {
-      res.send({users:data})
+      console.log(req.body.name);
+      res.send(`Update user:\nname:${req.body.name}\npassword:${hash.generate(req.body.password)}\nemail:${req.body.email}\nbirthday: ${req.body.birthday}`)
     })
   }
 }

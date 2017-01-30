@@ -13,9 +13,10 @@
     "ejs": "~2.5.2",
     "express": "~4.14.0",
     "morgan": "~1.7.0",
+    "password-hash": "^1.2.2",
     "sequelize": "^3.30.0",
     "serve-favicon": "~2.3.0",
-    "password-hash": "^1.2.2"
+    "sqlite3": "^3.1.8"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
