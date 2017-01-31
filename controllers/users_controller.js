@@ -25,7 +25,7 @@ module.exports = {
     }).then(function (data) {
       // req.json(data);
       // res.send(`${JSON.stringify({users:data})}\nhas been created`)
-      res.send(`User:\nname:${req.body.name}\npassword:${hash.generate(req.body.password)}\nemail:${req.body.email}\nbirthday: ${req.body.birthday}\nhas been created`)
+      res.send(`User:\nname:${req.body.name}\npassword:${req.body.password}\nemail:${req.body.email}\nbirthday: ${req.body.birthday}\nhas been created`)
     })
   },
   deleteUser: (req, res) => {
@@ -48,7 +48,7 @@ module.exports = {
       })
     }).then(function (data) {
       // res.json(data);
-      res.send(`Update user:\nname:${req.body.name}\npassword:${hash.generate(req.body.password)}\nemail:${req.body.email}\nbirthday: ${req.body.birthday}`)
+      res.send(`Update user:\nname:${req.body.name}\npassword:${req.body.password}\nemail:${req.body.email}\nbirthday: ${req.body.birthday}`)
     })
   }
 }
